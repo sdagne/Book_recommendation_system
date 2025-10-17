@@ -140,6 +140,7 @@ books_recommender/
 
 
 🗂️ Project Structure
+```
 ```bash
 .
 ├── books_recommender/          # Main package
