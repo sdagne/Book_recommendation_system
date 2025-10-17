@@ -139,13 +139,13 @@ if __name__ == "__main__":
     
     # Header section
     st.markdown('<div class="header-section">', unsafe_allow_html=True)
-    st.header('📚 Book Recommendation System')
+    st.header('📗📒📕 - Book Recommendation System')
     st.text("This is a Collaborative Filtering based recommendation system!")
     st.markdown('</div>', unsafe_allow_html=True)
 
     obj = Recommendation()
 
-    # Training section with blue styling
+    # Training section with green styling
     st.markdown('<div class="step-section" style="border-color: green;">', unsafe_allow_html=True)
     st.markdown('<p style="color: green; font-weight: bold; margin: 0;">📗 Step 1: Train the System</p>', unsafe_allow_html=True)
     st.markdown('<p style="color: green; margin: 5px 0 15px 0;">Click below to train the recommendation model</p>', unsafe_allow_html=True)
@@ -167,7 +167,7 @@ if __name__ == "__main__":
     st.markdown('<p style="color: orange; font-weight: bold; margin: 0;">📒 Step 2: Select a Book</p>', unsafe_allow_html=True)
     
     if book_names_list:
-        # Display first book in red
+        # Display first book in orange
         st.markdown(f'<p style="color: orange; font-weight: bold; background-color: #ffebee; padding: 8px; border-radius: 5px;">Sample book available: <em>{book_names_list[0]}</em></p>', unsafe_allow_html=True)
     else:
         st.warning("No books available. Please train the system first.")
@@ -177,7 +177,7 @@ if __name__ == "__main__":
         book_names_list if book_names_list else ["-- Please train system first --"])
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Recommendation section with green styling
+    # Recommendation section with red styling
     st.markdown('<div class="step-section" style="border-color: red;">', unsafe_allow_html=True)
     st.markdown('<p style="color: red; font-weight: bold; margin: 0;">📕 Step 3: Get Recommendations</p>', unsafe_allow_html=True)
     st.markdown('<p style="color: red; margin: 5px 0 15px 0;">Click below to see personalized book suggestions</p>', unsafe_allow_html=True)
