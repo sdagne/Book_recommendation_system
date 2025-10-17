@@ -18,6 +18,7 @@
 
 # 🏗️ System Architecture
 ```
+```bash
 text
 books_recommender/
 ├── components/          # Data processing stages
@@ -140,7 +141,7 @@ books_recommender/
 
 🗂️ Project Structure
 ```
-text
+```bash
 .
 ├── books_recommender/          # Main package
 │   ├── components/             # Pipeline components
