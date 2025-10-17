@@ -70,16 +70,16 @@ books_recommender/
 ```
 * 2 -  Virtual Environment
 ```
-bash
+```bash
  >py -3.10 -m venv .venv
 
  >.venv\Scripts\activate
  >macOS/Linux:
-
-bash
+```
+```bash
  >python3.10 -m venv .venv
  >source .venv/bin/activate
-
+```
  * 3 - Install Dependencies
   >pip install -r requirements.txt
 * 4 - Install Package in Development Mode
