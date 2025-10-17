@@ -96,146 +96,105 @@ class Recommendation:
         except Exception as e:
             raise AppException(e, sys) from e
 
-
 if __name__ == "__main__":
-    # Enhanced CSS for modern look
+    # Custom CSS for frame and styling
     st.markdown("""
     <style>
-    .main-container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-    }
-    .app-frame {
-        border: 1px solid #ddd;
-        border-radius: 15px;
-        padding: 30px;
-        margin: 20px 0;
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-    }
-    .app-header {
-        text-align: center;
-        margin-bottom: 40px;
-        padding: 20px;
-        background: white;
+    .main-frame {
+        border: 2px solid #e0e0e0;
         border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .step-card {
-        background: white;
-        padding: 25px;
-        margin: 25px 0;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        border-left: 5px solid;
-        transition: transform 0.3s ease;
-    }
-    .step-card:hover {
-        transform: translateY(-2px);
+        padding: 20px;
+        margin: 10px 0;
+        background-color: #fafafa;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-        color: #666;
-        font-size: 14px;
+        padding: 10px;
+        background-color: #f1f1f1;
         border-top: 1px solid #e0e0e0;
-        background: white;
-        border-radius: 0 0 10px 10px;
+        font-size: 12px;
+        color: #666;
     }
-    .highlight-book {
-        background: linear-gradient(45deg, #ffebee, #ffcdd2);
-        padding: 12px;
-        border-radius: 8px;
-        margin: 15px 0;
-        border-left: 4px solid #f44336;
+    .header-section {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .step-section {
+        margin: 20px 0;
+        padding: 15px;
+        border-left: 4px solid;
+        border-radius: 5px;
+        background-color: white;
     }
     </style>
     """, unsafe_allow_html=True)
 
-    # Main container
-    st.markdown('<div class="main-container">', unsafe_allow_html=True)
+    # Main frame container
+    st.markdown('<div class="main-frame">', unsafe_allow_html=True)
     
-    # App frame
-    st.markdown('<div class="app-frame">', unsafe_allow_html=True)
-    
-    # Header
-    st.markdown('<div class="app-header">', unsafe_allow_html=True)
-    st.markdown('<h1 style="color: #2c3e50; margin-bottom: 10px;">📚 Book Recommendation System</h1>', unsafe_allow_html=True)
-    st.markdown('<p style="color: #7f8c8d; font-size: 16px;">Discover your next favorite read with AI-powered recommendations</p>', unsafe_allow_html=True)
+    # Header section
+    st.markdown('<div class="header-section">', unsafe_allow_html=True)
+    st.header('📚 Book Recommendation System')
+    st.text("This is a Collaborative Filtering based recommendation system!")
     st.markdown('</div>', unsafe_allow_html=True)
 
     obj = Recommendation()
 
-    # Step 1: Training
-    st.markdown('<div class="step-card" style="border-left-color: #3498db;">', unsafe_allow_html=True)
-    st.markdown('<h3 style="color: #3498db; margin-bottom: 15px;">🔧 Step 1: System Training</h3>', unsafe_allow_html=True)
-    st.markdown('<p style="color: #3498db; margin-bottom: 20px;">Initialize the recommendation engine by training the model</p>', unsafe_allow_html=True)
-    
-    if st.button('🚀 Train Recommendation System', key='train_btn'):
-        with st.spinner('Training in progress... This may take a few minutes.'):
-            obj.train_engine()
-        st.success('✅ Training completed successfully!')
+    # Training section with blue styling
+    st.markdown('<div class="step-section" style="border-color: blue;">', unsafe_allow_html=True)
+    st.markdown('<p style="color: blue; font-weight: bold; margin: 0;">🔧 Step 1: Train the System</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color: blue; margin: 5px 0 15px 0;">Click below to train the recommendation model</p>', unsafe_allow_html=True)
+    if st.button('🚀 Train Recommendation System'):
+        obj.train_engine()
     st.markdown('</div>', unsafe_allow_html=True)
 
     try:
-        # Load book data
+        # Load and convert book names safely
         book_names = pickle.load(open(os.path.join('templates','book_names.pkl'), 'rb'))
         book_names_list = book_names.tolist() if hasattr(book_names, 'tolist') else list(book_names)
+        
     except Exception as e:
-        st.error(f"❌ Error loading book data: {e}")
+        st.error(f"Error loading books: {e}")
         book_names_list = []
 
-    # Step 2: Book Selection
-    st.markdown('<div class="step-card" style="border-left-color: #e67e22;">', unsafe_allow_html=True)
-    st.markdown('<h3 style="color: #e67e22; margin-bottom: 15px;">📖 Step 2: Book Selection</h3>', unsafe_allow_html=True)
+    # Book selection section
+    st.markdown('<div class="step-section" style="border-color: orange;">', unsafe_allow_html=True)
+    st.markdown('<p style="color: orange; font-weight: bold; margin: 0;">📖 Step 2: Select a Book</p>', unsafe_allow_html=True)
     
     if book_names_list:
-        st.markdown(f"""
-        <div class="highlight-book">
-            <p style="color: #c0392b; font-weight: bold; margin: 0;">
-                📚 First available book: <em>{book_names_list[0]}</em>
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        # Display first book in red
+        st.markdown(f'<p style="color: red; font-weight: bold; background-color: #ffebee; padding: 8px; border-radius: 5px;">Sample book available: <em>{book_names_list[0]}</em></p>', unsafe_allow_html=True)
     else:
-        st.warning("⚠️ No books available. Please train the system first.")
+        st.warning("No books available. Please train the system first.")
 
     selected_books = st.selectbox(
-        "Choose your book:",
-        book_names_list if book_names_list else ["-- Please train the system first --"],
-        key='book_select'
-    )
+        "Choose a book from the dropdown:",
+        book_names_list if book_names_list else ["-- Please train system first --"])
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Step 3: Recommendations
-    st.markdown('<div class="step-card" style="border-left-color: #27ae60;">', unsafe_allow_html=True)
-    st.markdown('<h3 style="color: #27ae60; margin-bottom: 15px;">🎯 Step 3: Get Recommendations</h3>', unsafe_allow_html=True)
-    st.markdown('<p style="color: #27ae60; margin-bottom: 20px;">Discover books similar to your selection</p>', unsafe_allow_html=True)
+    # Recommendation section with green styling
+    st.markdown('<div class="step-section" style="border-color: green;">', unsafe_allow_html=True)
+    st.markdown('<p style="color: green; font-weight: bold; margin: 0;">🎯 Step 3: Get Recommendations</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color: green; margin: 5px 0 15px 0;">Click below to see personalized book suggestions</p>', unsafe_allow_html=True)
     
-    if st.button('✨ Show Recommendations', key='recommend_btn'):
+    if st.button('✨ Show Recommendation'):
         if book_names_list and selected_books in book_names_list:
-            with st.spinner('Finding the perfect recommendations for you...'):
-                obj.recommendations_engine(selected_books)
+            obj.recommendations_engine(selected_books)
         else:
-            st.error("❌ Please train the system and select a valid book first.")
+            st.error("Please train the system first to get recommendations.")
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Close app frame
+    # Close main frame
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Footer
     st.markdown("""
     <div class="footer">
-        <p style="margin: 0;">
-            © 2024 Book Recommendation System | All Rights Reserved | Developed with ❤️ by Shewan
-        </p>
-        <p style="margin: 5px 0 0 0; font-size: 12px; color: #95a5a6;">
-            Powered by Streamlit & Machine Learning
-        </p>
+        © 2025 Book Recommendation System. All rights reserved. | Developed by Shewan
     </div>
     """, unsafe_allow_html=True)
-
-    # Close main container
-    st.markdown('</div>', unsafe_allow_html=True)
