@@ -202,8 +202,9 @@ Shewan Dagne
 📅 Last Updated
 October 2025
 
-Now run
+
 ```bash
+## Now run
 streamlit run app.py
 ```
 
