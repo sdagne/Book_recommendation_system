@@ -1,4 +1,4 @@
-# End-to-End-Book-Recommendation-System
+# Recommendation-System
 
 ## Workflow 
 
@@ -16,12 +16,12 @@
 * Clone the repository
 
 ```bash
-https://github.com/Aditya-Rai0/End-to-End-Book-Recommendation-System.git
+https://github.com/sdagne/Book_recommendation_system.git
 ```
 ### STEP 01- Create a virtual environment after opening the repository:
 
 ```bash
-py -3.10 -m venv .venv
+py -3.13 -m venv .venv
 ```
 
 ```bash
