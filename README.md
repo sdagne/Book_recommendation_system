@@ -20,24 +20,24 @@
 ```
 text
 books_recommender/
-├── components/          # Data processing stages
-│   ├── stage_00_data_ingestion.py
-│   ├── stage_01_data_validation.py
-│   ├── stage_02_data_transformation.py
-│   └── stage_03_model_trainer.py
-├── config/             # Configuration management
-│   ├── configuration.py
-│   └── config.yaml
-├── entity/             # Data entities and schemas
-│   └── config_entity.py
-├── pipeline/           # Training pipeline
-│   └── training_pipeline.py
-├── utils/              # Utility functions
-│   └── util.py
-├── exception/          # Exception handling
-│   └── exception_handler.py
-└── logger/             # Logging configuration
-    └── log.py
+├──1 components/          # Data processing stages
+│     ├── 00 - data_ingestion.py
+│     ├── 01 - data_validation.py
+│     ├── 02 - data_transformation.py
+│     └── 03 - model_trainer.py
+├──2 config/             # Configuration management
+│     ├── configuration.py
+│     └── config.yaml
+├──3 entity/             # Data entities and schemas
+│     └── config_entity.py
+├──4 pipeline/           # Training pipeline
+│     └── training_pipeline.py
+├──5 utils/              # Utility functions
+│     └── util.py
+├──6 exception/          # Exception handling
+│     └── exception_handler.py
+└──7 logger/             # Logging configuration
+      └── log.py
 ```
 
 
@@ -70,6 +70,7 @@ cd Book_recommendation_system
 
 bash
  >py -3.10 -m venv .venv
+
  >.venv\Scripts\activate
  >macOS/Linux:
 
