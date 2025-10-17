@@ -139,7 +139,7 @@ if __name__ == "__main__":
     
     # Header section
     st.markdown('<div class="header-section">', unsafe_allow_html=True)
-    st.header('📗📒📕 - Book Recommendation System')
+    st.header('📗📒📕Book Recommendation System')
     st.text("This is a Collaborative Filtering based recommendation system!")
     st.markdown('</div>', unsafe_allow_html=True)
 
