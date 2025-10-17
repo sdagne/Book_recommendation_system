@@ -3,7 +3,7 @@
 ## 👤 Author
 
 **Shewan Dagne**  
-Workplace Engineer | IT Systems | Automation & Scripting
+Workplace Engineer | IT Systems | Automation & Scripting | RAG | Machine Learning
 
 📧 Email: [shewan.dagne1@gmail.com](mailto:shewan.dagne1@gmail.com)  
 🌐 GitHub: [@sdagne](https://github.com/sdagne)  
