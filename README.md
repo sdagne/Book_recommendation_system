@@ -138,9 +138,9 @@ books_recommender/
     - Displays book recommendations in a clean grid layout
 
 
-
-🗂️ Project Structure
 ```
+🗂️ Project Structure
+
 ```bash
 .
 ├── books_recommender/          # Main package
