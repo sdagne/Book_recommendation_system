@@ -42,7 +42,7 @@ books_recommender/
 
 
 ## Workflow 
-
+  ```          
 - config.yaml
 - entity
 - config/configuration.py
@@ -50,24 +50,26 @@ books_recommender/
 - pipeline
 - main.py
 - app.py
+```
 
 # 📋 Prerequisites
- - Python 3.10 or higher
 
+ - Python 3.10 or higher
  - pip (Python package manager) 
 
 # 🛠️ Installation & Setup
 
 ## How to run?
 ### STEPS:
+
 * 1 - Clone the repository
 
 ```bash
-git clone https://github.com/sdagne/Book_recommendation_system.git
-cd Book_recommendation_system
+ git clone https://github.com/sdagne/Book_recommendation_system.git
+ cd Book_recommendation_system
 ```
-* 2 - Create Virtual Environment
-
+* 2 -  Virtual Environment
+```
 bash
  >py -3.10 -m venv .venv
 
@@ -82,10 +84,13 @@ bash
   >pip install -r requirements.txt
 * 4 - Install Package in Development Mode
  > pip install -e .
+ ```
+
 # 🎯 Usage
 ## Training the Model
  ### Option 1: Using the training pipeline
- >python main.py
+
+ > python main.py
 
 ### Option 2: Using the web interface
 
