@@ -146,9 +146,9 @@ if __name__ == "__main__":
     obj = Recommendation()
 
     # Training section with blue styling
-    st.markdown('<div class="step-section" style="border-color: blue;">', unsafe_allow_html=True)
-    st.markdown('<p style="color: blue; font-weight: bold; margin: 0;">🔧 Step 1: Train the System</p>', unsafe_allow_html=True)
-    st.markdown('<p style="color: blue; margin: 5px 0 15px 0;">Click below to train the recommendation model</p>', unsafe_allow_html=True)
+    st.markdown('<div class="step-section" style="border-color: green;">', unsafe_allow_html=True)
+    st.markdown('<p style="color: green; font-weight: bold; margin: 0;">🔧 Step 1: Train the System</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color: green; margin: 5px 0 15px 0;">Click below to train the recommendation model</p>', unsafe_allow_html=True)
     if st.button('🚀 Train Recommendation System'):
         obj.train_engine()
     st.markdown('</div>', unsafe_allow_html=True)
@@ -168,7 +168,7 @@ if __name__ == "__main__":
     
     if book_names_list:
         # Display first book in red
-        st.markdown(f'<p style="color: red; font-weight: bold; background-color: #ffebee; padding: 8px; border-radius: 5px;">Sample book available: <em>{book_names_list[0]}</em></p>', unsafe_allow_html=True)
+        st.markdown(f'<p style="color: orange; font-weight: bold; background-color: #ffebee; padding: 8px; border-radius: 5px;">Sample book available: <em>{book_names_list[0]}</em></p>', unsafe_allow_html=True)
     else:
         st.warning("No books available. Please train the system first.")
 
@@ -178,11 +178,11 @@ if __name__ == "__main__":
     st.markdown('</div>', unsafe_allow_html=True)
 
     # Recommendation section with green styling
-    st.markdown('<div class="step-section" style="border-color: green;">', unsafe_allow_html=True)
-    st.markdown('<p style="color: green; font-weight: bold; margin: 0;">🎯 Step 3: Get Recommendations</p>', unsafe_allow_html=True)
-    st.markdown('<p style="color: green; margin: 5px 0 15px 0;">Click below to see personalized book suggestions</p>', unsafe_allow_html=True)
+    st.markdown('<div class="step-section" style="border-color: red;">', unsafe_allow_html=True)
+    st.markdown('<p style="color: red; font-weight: bold; margin: 0;">🎯 Step 3: Get Recommendations</p>', unsafe_allow_html=True)
+    st.markdown('<p style="color: red; margin: 5px 0 15px 0;">Click below to see personalized book suggestions</p>', unsafe_allow_html=True)
     
-    if st.button('✨ Show Recommendation'):
+    if st.button('📕 Show Recommendation'):
         if book_names_list and selected_books in book_names_list:
             obj.recommendations_engine(selected_books)
         else:
