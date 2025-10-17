@@ -137,8 +137,9 @@ books_recommender/
     - Displays book recommendations in a clean grid layout
 
 
-```
+
 🗂️ Project Structure
+```
 text
 .
 ├── books_recommender/          # Main package
