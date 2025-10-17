@@ -204,7 +204,7 @@ October 2025
 
 
 ```bash
-## Now run
+Now run
 streamlit run app.py
 ```
 
