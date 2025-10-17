@@ -195,6 +195,6 @@ if __name__ == "__main__":
     # Footer
     st.markdown("""
     <div class="footer">
-        © 2025 Book Recommendation System. All rights reserved. | <h6 style="color: blue;"> Developed by Shewan </h6>
+        © 2025 Book Recommendation System. All rights reserved. | <h8 style="color: blue;"> Developed by Shewan Dagne </h8>
     </div>
     """, unsafe_allow_html=True)
