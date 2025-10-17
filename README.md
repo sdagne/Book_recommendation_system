@@ -84,6 +84,7 @@ books_recommender/
   >pip install -r requirements.txt
 * 4 - Install Package in Development Mode
  > pip install -e .
+
  ```
 
 # 🎯 Usage
@@ -137,7 +138,6 @@ books_recommender/
 
 
 ```
-
 🗂️ Project Structure
 text
 .
