@@ -1,3 +1,23 @@
+---
+
+## 👤 Author
+
+**Shewan Dagne**  
+Workplace Engineer | IT Systems | Automation & Scripting
+
+📧 Email: [shewan.dagne1@gmail.com](mailto:shewan.dagne1@gmail.com)  
+🌐 GitHub: [@sdagne](https://github.com/sdagne)  
+💼 LinkedIn: [Shewan Dagne](https://www.linkedin.com/in/shewan-dagne-a483802/)
+
+---
+
+### 📝 License
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+### 📅 Last Updated
+October 2025
+
+
 # Recommendation-System
 
 ## Workflow 
