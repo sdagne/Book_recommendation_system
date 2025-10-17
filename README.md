@@ -20,23 +20,23 @@
 ```
 text
 books_recommender/
-├──1 components/          # Data processing stages
-│     ├── 00 - data_ingestion.py
-│     ├── 01 - data_validation.py
-│     ├── 02 - data_transformation.py
-│     └── 03 - model_trainer.py
-├──2 config/             # Configuration management
+├── components/          # Data processing stages
+│     ├──data_ingestion.py
+│     ├──data_validation.py
+│     ├──data_transformation.py
+│     └──model_trainer.py
+├── config/             # Configuration management
 │     ├── configuration.py
 │     └── config.yaml
-├──3 entity/             # Data entities and schemas
+├── entity/             # Data entities and schemas
 │     └── config_entity.py
-├──4 pipeline/           # Training pipeline
+├── pipeline/           # Training pipeline
 │     └── training_pipeline.py
-├──5 utils/              # Utility functions
+├── utils/              # Utility functions
 │     └── util.py
-├──6 exception/          # Exception handling
+├── exception/          # Exception handling
 │     └── exception_handler.py
-└──7 logger/             # Logging configuration
+└── logger/             # Logging configuration
       └── log.py
 ```
 
